@@ -26,6 +26,9 @@ export default {
          btnHover: "#FDBB57",
          btnBdr: "#FFD687",
          shopBg: "#CFA485",
+         counterBg: "#FEECC8",
+         iconcolor: "#FFAF37",
+
 
 
       }
