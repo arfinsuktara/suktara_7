@@ -26,7 +26,7 @@ function Contact() {
   };
 
   return (
-    <div className="py-20 bg-gray-50 min-h-screen">
+    <div className="py-20 px-4 bg-gray-50 min-h-screen ">
       <Toaster position="top-right" />
       <Container>
         <h2 className="text-4xl font-bold text-center mb-16">Contact Us</h2>
