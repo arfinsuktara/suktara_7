@@ -14,7 +14,7 @@ function Collection() {
       <Container>
         <Heading
           as="h3"
-          text="New Collection"
+          text="Women Collection"
           className="text-center text-2xl sm:text-3xl md:text-[36px] font-pop font-bold pb-6 md:pb-10"
         />
 

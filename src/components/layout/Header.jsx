@@ -37,7 +37,7 @@ function Header() {
                 <Menu link="/" menuName="Home" />
                 <Menu link="/kids" menuName="Kids" />
                 <Menu link="/women" menuName="Women" />
-                <Menu link="/new-arrival" menuName="New Collection" />
+                <Menu link="/new-arrival" menuName="New Arrival" />
                 <Menu link="/contact" menuName="Contact" />
               </Flex>
             </ul>

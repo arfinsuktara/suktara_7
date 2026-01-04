@@ -19,7 +19,7 @@ function Banner() {
 
             <Heading
               as="p"
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+              text="Discover the latest trends, premium quality outfits, and styles that perfectly match your personality."
               className="text-base sm:text-lg md:text-xl lg:text-[22px] text-center lg:text-start font-pop leading-7 md:leading-8 lg:leading-9 md:pr-20 lg:pr-40 py-3 md:py-5"
             />
 <div className="flex justify-center md:justify-start">

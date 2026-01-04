@@ -1,15 +1,13 @@
-
-// import Banner from "../components/layout/Banner";
-// import Collection from "../components/layout/Collection";
-// import Counter from "../components/layout/Counter";
-// import Shop from "../components/layout/Shop";
+import Collection from "../components/kids/Collection";
+import Counter from "../components/kids/Counter";
+import Shop from "../components/kids/Shop";
 
 function Kids() {
   return (
     <>
-      {/* <Collection />
+      <Collection />
       <Counter />
-      <Shop /> */}
+      <Shop />
     </>
   );
 }
