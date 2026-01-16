@@ -88,6 +88,10 @@ const CartSidebar = () => {
                         </Flex>
                         <Button
                             btnName="Checkout"
+                            onClick={() => {
+                                toggleCart();
+                                window.location.href = "/checkout";
+                            }}
                             className="w-full py-3 bg-black text-white rounded hover:bg-gray-800 transition-colors"
                         />
                     </div>
