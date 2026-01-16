@@ -1,13 +1,41 @@
 import Container from "../common/Container";
 import Flex from "../common/Flex";
-import Image from "../common/Image";
-import Button from "../common/Button";
 import Heading from "../common/Heading";
+import ProductCard from "../common/ProductCard";
 
 import collection1 from "../../assets/kids/kids11.jpg";
 import collection2 from "../../assets/kids/kids22.jpg";
 import collection3 from "../../assets/kids/kids3.jpg";
 import collection4 from "../../assets/kids/kids4.jpg";
+
+const kidsCollectionItems = [
+  {
+    id: 601,
+    name: "Boy's Shirt",
+    price: 1100,
+    image: collection1,
+  },
+  {
+    id: 602,
+    name: "Formal Pants",
+    price: 1600,
+    oldPrice: 1800,
+    image: collection2,
+  },
+  {
+    id: 603,
+    name: "Winter Sweater",
+    price: 1350,
+    image: collection4,
+  },
+  {
+    id: 604,
+    name: "Kid's Sleeves",
+    price: 900,
+    oldPrice: 1200,
+    image: collection3,
+  },
+];
 
 function Collection() {
   return (
@@ -20,53 +48,11 @@ function Collection() {
         />
 
         <Flex className="flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap justify-center lg:justify-between gap-6 md:gap-8">
-          {/* Card 1 */}
-          <div className="w-full sm:w-[calc(50%-1rem)] lg:w-[350px] aspect-[4/5] rounded-lg relative mx-auto sm:mx-0">
-            <Image
-              imgSrc={collection1}
-              className="w-full h-full rounded-lg object-cover"
-            />
-            <Button
-              btnName="Shirt"
-              className="bg-white rounded-2xl py-2 px-12 sm:px-16 md:px-20 absolute left-1/2 bottom-5 md:bottom-7 -translate-x-1/2 text-sm md:text-base"
-            />
-          </div>
-
-          {/* Card 2 */}
-          <div className="w-full sm:w-[calc(50%-1rem)] lg:w-[350px] aspect-[4/5] rounded-lg relative mx-auto sm:mx-0">
-            <Image
-              imgSrc={collection2}
-              className="w-full h-full rounded-lg object-cover"
-            />
-            <Button
-              btnName="Pants"
-              className="bg-white rounded-2xl py-2 px-12 sm:px-16 md:px-20 absolute left-1/2 bottom-5 md:bottom-7 -translate-x-1/2 text-sm md:text-base"
-            />
-          </div>
-
-          {/* Card 3 */}
-          <div className="w-full sm:w-[calc(50%-1rem)] lg:w-[350px] aspect-[4/5] rounded-lg relative mx-auto sm:mx-0">
-            <Image
-              imgSrc={collection4}
-              className="w-full h-full rounded-lg object-cover"
-            />
-            <Button
-              btnName="Sweater"
-              className="bg-white rounded-2xl py-2 px-12 sm:px-16 md:px-20 absolute left-1/2 bottom-5 md:bottom-7 -translate-x-1/2 text-sm md:text-base"
-            />
-          </div>
-
-          {/* Card 4 */}
-          <div className="w-full sm:w-[calc(50%-1rem)] lg:w-[350px] aspect-[4/5] rounded-lg relative mx-auto sm:mx-0">
-            <Image
-              imgSrc={collection3}
-              className="w-full h-full rounded-lg object-cover"
-            />
-            <Button
-              btnName="Sleeves"
-              className="bg-white rounded-2xl py-2 px-12 sm:px-16 md:px-20 absolute left-1/2 bottom-5 md:bottom-7 -translate-x-1/2 text-sm md:text-base"
-            />
-          </div>
+          {kidsCollectionItems.map((item) => (
+            <div key={item.id} className="w-full sm:w-[calc(50%-1rem)] lg:w-[350px]">
+              <ProductCard product={item} />
+            </div>
+          ))}
         </Flex>
       </Container>
     </div>

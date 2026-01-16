@@ -1,16 +1,38 @@
 import Container from "../common/Container";
 import Flex from "../common/Flex";
-import Image from "../common/Image";
-import Button from "../common/Button";
 import Heading from "../common/Heading";
+import ProductCard from "../common/ProductCard";
 
 import collection1 from "../../assets/collection1.png";
 import collection2 from "../../assets/collection2.png";
 import collection3 from "../../assets/collection3.png";
 
+const collectionItems = [
+  {
+    id: 501,
+    name: "Sweater",
+    price: 2500,
+    oldPrice: 3000,
+    image: collection1,
+  },
+  {
+    id: 502,
+    name: "Jeans",
+    price: 3500,
+    image: collection2,
+  },
+  {
+    id: 503,
+    name: "Baskets",
+    price: 1800,
+    oldPrice: 2200,
+    image: collection3,
+  },
+];
+
 function Collection() {
   return (
-    <div className="py-8 md:py-10  px-4">
+    <div className="py-8 md:py-10 px-4">
       <Container>
         <Heading
           as="h3"
@@ -19,29 +41,11 @@ function Collection() {
         />
 
         <Flex className="flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap justify-center lg:justify-between gap-6 md:gap-8">
-          <div className="w-full sm:w-[calc(50%-1rem)] lg:w-[350px] rounded-lg relative mx-auto sm:mx-0">
-            <Image imgSrc={collection1} className="w-full h-auto rounded-lg" />
-            <Button
-              btnName="Sweater"
-              className="bg-white rounded-2xl py-2 px-12 sm:px-16 md:px-20 absolute left-1/2 bottom-5 md:bottom-7 -translate-x-1/2 text-sm md:text-base"
-            />
-          </div>
-
-          <div className="w-full sm:w-[calc(50%-1rem)] lg:w-[350px] rounded-lg relative mx-auto sm:mx-0">
-            <Image imgSrc={collection2} className="w-full h-auto rounded-lg" />
-            <Button
-              btnName="Jeans"
-              className="bg-white rounded-2xl py-2 px-12 sm:px-16 md:px-20 absolute left-1/2 bottom-5 md:bottom-7 -translate-x-1/2 text-sm md:text-base"
-            />
-          </div>
-
-          <div className="w-full sm:w-[calc(50%-1rem)] lg:w-[350px] rounded-lg relative mx-auto sm:mx-0 h-auto lg:h-[402px]">
-            <Image imgSrc={collection3} className="w-full h-full rounded-lg object-cover" />
-            <Button
-              btnName="Baskets"
-              className="bg-white rounded-2xl py-2 px-12 sm:px-16 md:px-20 absolute left-1/2 bottom-5 md:bottom-7 -translate-x-1/2 text-sm md:text-base"
-            />
-          </div>
+          {collectionItems.map((item) => (
+            <div key={item.id} className="w-full sm:w-[calc(50%-1rem)] lg:w-[350px]">
+              <ProductCard product={item} />
+            </div>
+          ))}
         </Flex>
       </Container>
     </div>
