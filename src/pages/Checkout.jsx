@@ -75,7 +75,7 @@ function Checkout() {
                             <Heading as="h3" text="Shipping Information" className="text-xl font-semibold mb-6" />
                             <form onSubmit={handleSubmit} className="space-y-4">
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                    <label className="block text-sm font-medium text-gray-700 mb-1">Full Name <span className="text-red-500">*</span></label>
                                     <input
                                         type="text"
                                         name="name"
@@ -88,7 +88,7 @@ function Checkout() {
                                 </div>
                                 <Flex className="flex-col md:flex-row gap-4">
                                     <div className="w-full md:w-1/2">
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                        <label className="block text-sm font-medium text-gray-700 mb-1">Email <span className="text-red-500">*</span></label>
                                         <input
                                             type="email"
                                             name="email"
@@ -100,7 +100,7 @@ function Checkout() {
                                         />
                                     </div>
                                     <div className="w-full md:w-1/2">
-                                        <label className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                                        <label className="block text-sm font-medium text-gray-700 mb-1">Phone <span className="text-red-500">*</span></label>
                                         <input
                                             type="tel"
                                             name="phone"
@@ -113,7 +113,7 @@ function Checkout() {
                                     </div>
                                 </Flex>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-1">Address</label>
+                                    <label className="block text-sm font-medium text-gray-700 mb-1">Address <span className="text-red-500">*</span></label>
                                     <textarea
                                         name="address"
                                         required
