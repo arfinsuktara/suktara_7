@@ -22,12 +22,31 @@ function Checkout() {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
+    const validateForm = () => {
+        const { name, email, phone, address } = formData;
+        if (!name.trim()) return "Full Name is required";
+        if (!email.trim()) return "Email is required";
+        if (!/\S+@\S+\.\S+/.test(email)) return "Email is invalid";
+        if (!phone.trim()) return "Phone number is required";
+        if (phone.length < 11) return "Phone number must be at least 11 digits";
+        if (!address.trim()) return "Address is required";
+        return null;
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
+
         if (cartItems.length === 0) {
             toast.error("Your cart is empty!");
             return;
         }
+
+        const error = validateForm();
+        if (error) {
+            toast.error(error);
+            return;
+        }
+
         // Simulate order placement
         console.log("Order Placed:", { items: cartItems, total: totalAmount, customer: formData });
         toast.success("Order Placed Successfully!");
