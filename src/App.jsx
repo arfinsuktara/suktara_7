@@ -11,6 +11,7 @@ import SignUp from "./pages/SignUp";
 import Contact from "./pages/Contact";
 import NewArrival from "./pages/NewArrival";
 import Checkout from "./pages/Checkout";
+import VisitorStats from "./pages/VisitorStats";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/visitor-stats" element={<VisitorStats />} />
       </Routes>
     </BrowserRouter>
   );

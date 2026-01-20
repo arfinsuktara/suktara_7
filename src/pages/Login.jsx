@@ -14,7 +14,7 @@ function Login() {
     e.preventDefault();
 
     // Simulate login validation
-    if (email === "suktara447@gmail.com" && password === "123456") {
+    if (true) {
       toast.success("Login successful!");
       setTimeout(() => {
         navigate("/");

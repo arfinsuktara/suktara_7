@@ -28,10 +28,10 @@ function Shop({
                 className="text-base sm:text-lg md:text-xl lg:text-[24px] font-Frank leading-7 md:leading-8 lg:leading-9 py-4 md:py-5 text-white"
               />
 
-              <Button
+              {/* <Button
                 btnName="Learn More"
                 className="bg-black text-white py-3 px-10 md:py-4 md:px-12 lg:py-5 lg:px-14 rounded-lg uppercase text-sm md:text-base"
-              />
+              /> */}
             </div>
 
             {/* Products Container */}

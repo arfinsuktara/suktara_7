@@ -4,6 +4,7 @@ import Image from "../common/Image";
 import Heading from "../common/Heading";
 import Button from "../common/Button";
 import model from "../../assets/imgbanner.png";
+import { Link } from "react-router-dom";
 
 function Banner() {
   return (
@@ -22,12 +23,14 @@ function Banner() {
               text="Discover the latest trends, premium quality outfits, and styles that perfectly match your personality."
               className="text-base sm:text-lg md:text-xl lg:text-[22px] text-center lg:text-start font-pop leading-7 md:leading-8 lg:leading-9 md:pr-20 lg:pr-40 py-3 md:py-5"
             />
-<div className="flex justify-center md:justify-start">
-              <Button
-              btnName="Shop Now"
-              className="bg-black text-white py-3 px-10 md:py-4 md:px-12 lg:py-5 lg:px-14 rounded-lg uppercase text-sm md:text-base"
-            />
-</div>
+            <div className="flex justify-center md:justify-start">
+              <Link to="/visitor-stats">
+                <Button
+                  btnName="Visitors"
+                  className="bg-black text-white py-3 px-10 md:py-4 md:px-12 lg:py-5 lg:px-14 rounded-lg uppercase text-sm md:text-base"
+                />
+              </Link>
+            </div>
           </div>
 
           <div className="w-full md:w-1/2 -ml-14 sm:-ml-24">
